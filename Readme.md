@@ -77,3 +77,28 @@ En la imagen anterior, hemos definido una tabla con sus columnas para la base de
 - 10 o más → "Empanada".
 - Otro valor → "Sin aperitivo".
 
+### 4. Estructura del security para el módulo. 😄
+
+Dentro de la carpeta que hemos creado anteriormente, localizamos el archivo ir.model.access.csv.
+
+![secutiry1](https://github.com/user-attachments/assets/b04419df-58e5-4c03-8b19-d24b728f60e4)
+
+Lo editamos como en esta imagen.
+
+![security2](https://github.com/user-attachments/assets/e137d6fc-f350-4f2e-ba00-81d454faa259)
+
+En esta imagen, definimos qué usuarios pueden leer, escribir, crear o eliminar registros en la base de datos según su grupo de acceso.
+
+- id: Identificador único del registro de permisos (access_modulo_aperitivos_modulo_aperitivos).
+- name: Nombre descriptivo del permiso (modulo_aperitivos.modulo_aperitivos).
+- model_id:id: Modelo al que se aplican los permisos (model_modulo_aperitivos_modulo_aperitivos).
+- group_id:id: Grupo de usuarios con estos permisos (base.group_user, es decir, usuarios estándar).
+- perm_read: Permiso de lectura (1 = permitido).
+- perm_write: Permiso de escritura (1 = permitido).
+- perm_create: Permiso para crear nuevos registros (1 = permitido).
+- perm_unlink: Permiso para eliminar registros (1 = permitido).
+
+
+
+
+
