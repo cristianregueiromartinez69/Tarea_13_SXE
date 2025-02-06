@@ -53,4 +53,27 @@ En la imagen anterior, hemos definido las partes más importantes del módulo:
 - data: Archivos XML y CSV que se cargan siempre al instalar el módulo (permisos, vistas, plantillas, etc.).
 - demo: Archivos de datos de prueba que solo se cargan en modo demostración.
 
+### 3. Estructura del model para la tabla de la base de datos del módulo. 😄
+
+Dentro de la carpeta que hemos creado anteriormente, localizamos el archivo models.py.
+
+![models1](https://github.com/user-attachments/assets/b23e98a9-115f-41b3-b398-a866b76f5750)
+
+Lo abrimos y lo editamos como aquí.
+
+![models2](https://github.com/user-attachments/assets/27c862d8-0fec-4045-81e1-3a2fc4494d83)
+
+En la imagen anterior, hemos definido una tabla con sus columnas para la base de datos:
+
+- _name: Define el nombre técnico del modelo en Odoo (modulo_aperitivos.modulo_aperitivos).
+- _description: Descripción del modelo para identificar su propósito.
+- alumno: Campo de tipo Char para almacenar el nombre del alumno.
+- nivel_hambre: Campo de tipo Integer que almacena el nivel de hambre del alumno.
+- snack_recomendado: Campo de tipo Char calculado automáticamente en función del nivel de hambre.
+- _get_value_hambre: Método que determina el aperitivo recomendado según el nivel de hambre.
+- 1 a 3 → "Gominolas".
+- 4 a 6 → "Chaskis".
+- 7 a 9 → "Bollería".
+- 10 o más → "Empanada".
+- Otro valor → "Sin aperitivo".
 
