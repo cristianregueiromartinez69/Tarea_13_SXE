@@ -98,6 +98,27 @@ En esta imagen, definimos qué usuarios pueden leer, escribir, crear o eliminar 
 - perm_create: Permiso para crear nuevos registros (1 = permitido).
 - perm_unlink: Permiso para eliminar registros (1 = permitido).
 
+### 5. Estructura del view para el módulo. 😄
+
+Dentro de la carpeta que hemos creado anteriormente, localizamos el archivo views.xml.
+
+![views1](https://github.com/user-attachments/assets/80d8f406-335c-4e2f-a3de-dc4ff50a3bb5)
+
+Lo editamos como en esta imagen.
+
+![views2](https://github.com/user-attachments/assets/1851b9ba-9e7a-4462-8ce8-1ecb700ef0c0)
+
+La imagen anterior, el archivo ***views.xml***, especifica cómo se muestran los datos en vistas, cómo se accede a los modelos y cómo se organizan los menús.
+
+```bash
+<record model="ir.ui.view" id="modulo_aperitivos_list"> → Crea la vista en lista (tree) mostrando alumno, nivel_hambre y snack_recomendado.
+<record model="ir.actions.act_window" id="modulo_aperitivos_action_window"> → Define una acción para abrir la vista en modo lista o formulario.
+<menuitem name="modulo_aperitivos" id="modulo_aperitivos_menu_root"/> → Crea un menú principal.
+<menuitem name="Menu 1" id="modulo_aperitivos_menu_1" parent="modulo_aperitivos_menu_root"/> → Crea un submenú dentro del menú principal.
+<menuitem name="List" id="modulo_aperitivos_menu_1_list" parent="modulo_aperitivos_menu_1" action="modulo_aperitivos_action_window"/> → Agrega una opción en el submenú para abrir la lista de aperitivos.
+```
+
+
 
 
 
